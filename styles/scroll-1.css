@@ -1,0 +1,26 @@
+/* scroll-1.css */
+body, html {scroll-behavior: smooth;/* body, html을 묶어서 동작 */
+}
+body {
+    /* height: 300vh; 테스트용 높이값(실제 작업에서는 내용만큼 높이를 가짐) */
+    background: linear-gradient(lightblue, lightyellow, lightgray);
+}
+.popup {
+    position: fixed; right: 50px; bottom: 50px;
+}
+.popup .top {/* 고정 X, 부모를 따라다님 */
+    background: #fff; border-radius: 50%;
+    width: 40px; height:40px; display: block;
+    text-align: center; line-height: 40px;
+}
+main .thumnail {height: 60vh; border: 3px solid #000;}
+main .category_title {
+    position: sticky; top:0;/* top:0 좌표에 오면 부모가 끝날 때까지 그 위치에 고정시키기 */
+    display: flex; justify-content: space-around;
+    align-items: center; padding: 20px 0;
+}
+main .category_title a {flex: 1; text-align: center;}
+main .category_title a.active {
+    background: #fff; line-height: 40px; font-weight: 600;
+}
+main .category_contents section {height: 100vh;}/* 테스트값(실제작업에서는 사용X) */
